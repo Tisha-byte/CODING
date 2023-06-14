@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+int largestsum_subarray(int arr[],int n)
+{ int largest=0;
+for(int i=0;i<n;i++)
+{
+    for(int j= i;j<=n;j++)
+    {int sum=0;
+        for(int k=i;k<j;k++)
+        {   
+            sum+=arr[k];
+        
+            
+        }
+        largest=max(largest,sum);
+        cout<<endl;
+    }
+}
+    return largest;
+}
+using namespace std;
+
+int main() {
+    int n;
+    int p;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++)
+    cin>>a[i];
+    p=largestsum_subarray(a,n);
+    cout<<p;
+    
+    
+
+    return 0;
+}
